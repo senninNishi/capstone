@@ -1,0 +1,64 @@
+
+header p{
+  text-align: right;
+}
+
+body{
+  font-family: Montserrat Light;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: Roboto;
+}
+
+.about_malanday{
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 20px;
+}
+
+.section_3{
+  padding-bottom: 2em;
+}
+
+.navigation{
+  list-style-type: none;
+  text-align: right;
+}
+.navigation li{
+  display: inline-block;
+}
+.benefit_table td{
+  text-align: center;
+}
+td img{
+  height: 20%;
+  width: 20%;
+}
+.know{
+  text-align: center;
+}
+footer{
+  padding-top: 20px;
+}
+.footer_content{
+  background: #267555;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.footer_content li{
+  list-style-type: none;
+  padding-bottom: 10px;
+}
+
+.footer_content a{
+  text-decoration: none;
+  color: #ebf0f7;
+}
+
+.footer_year{
+  text-align: center;
+  color: #ebf0f7;
+  padding-top: 30px;
+}
