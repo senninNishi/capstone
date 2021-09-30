@@ -3,11 +3,9 @@ header p{
   text-align: right;
 }
 
-body{
-  font-family: Montserrat Light;
-}
-h1,h2,h3,h4,h5,h6{
-  font-family: Roboto;
+
+nav > *{
+  display: inline-block;
 }
 
 .about_malanday{
@@ -16,13 +14,29 @@ h1,h2,h3,h4,h5,h6{
   padding-right: 20px;
 }
 
+.malanday_container{
+  width: 30em;
+
+}
+
+section{
+  padding-bottom: 20px;
+}
+
 .section_3{
   padding-bottom: 2em;
 }
 
+.section_3 > *{
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10em;
+}
+
 .navigation{
   list-style-type: none;
-  text-align: right;
+  float: right;
+
 }
 .navigation li{
   display: inline-block;
