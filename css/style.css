@@ -1,6 +1,25 @@
 body{
   font-family: Montserrat Light;
+  margin: 0px;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: Roboto;
+}
+
+
+.header-bg{
+  background: #267555;
+
+}
+
+.header-bg header{
+  text-align: center;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 30px;
+  color: #edf2ed;
+}
+
+.toggle-btn{
+  font-family: Montserrat;
 }

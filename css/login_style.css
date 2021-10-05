@@ -1,16 +1,4 @@
 
-.header-bg{
-  background: #267555;
-
-}
-
-.header-bg header{
-  text-align: center;
-  font-family: Roboto;
-  font-weight: bold;
-  font-size: 30px;
-  color: #edf2ed;
-}
 .bg{
   height: 100%;
   width: 100%;
@@ -27,6 +15,7 @@
   background: #267555;
   padding: 5px;
   overflow: hidden;
+  border-radius: 20px;
 }
 
 .button-box{
@@ -44,7 +33,6 @@
   outline: none;
   position: relative;
   font-family: Montserrat;
-
 }
 
 #btn{
@@ -56,6 +44,7 @@
   background: #edf2ed;
   border-radius: 30px;
   transition: .5s;
+
 }
 
 .input-group{
@@ -109,4 +98,10 @@ label{
 
 #register{
   left: 450px;
+}
+
+.admin{
+  position: relative;
+  color: #edf2ed;
+  text-align: center;
 }

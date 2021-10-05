@@ -1,4 +1,3 @@
-
 header p{
   text-align: right;
 }
@@ -8,52 +7,39 @@ nav > *{
   display: inline-block;
 }
 
-.about_malanday{
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 20px;
-}
-
-.malanday_container{
-  width: 30em;
-
-}
-
-section{
-  padding-bottom: 20px;
-}
-
-.section_3{
-  padding-bottom: 2em;
-}
-
-.section_3 > *{
-  display: inline-block;
-  vertical-align: middle;
-  padding-right: 10em;
+.container-section #about{
+  width: 50%;
 }
 
 .navigation{
   list-style-type: none;
-  float: right;
-
 }
 .navigation li{
   display: inline-block;
 }
-.benefit_table td{
+.navigation a{
+  text-decoration: none;
+  transition: 0.5s;
+  padding: 5px;
+  color: #000;
+}
+.navigation a:hover{
+  color: #267555;
+}
+
+.align-table td{
   text-align: center;
+  transition: 1s;
+}
+.align-table a{
+  text-decoration: none;
+  color: #000;
 }
 td img{
   height: 20%;
   width: 20%;
 }
-.know{
-  text-align: center;
-}
-footer{
-  padding-top: 20px;
-}
+
 .footer_content{
   background: #267555;
   text-align: center;
@@ -75,4 +61,33 @@ footer{
   text-align: center;
   color: #ebf0f7;
   padding-top: 30px;
+}
+
+.container-title{
+  background: #267555;
+  color: #ebf0f7;
+}
+
+.container-title >*{
+  padding: 5px;
+}
+
+.container-flex{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.item{
+  padding: 50px;
+}
+
+
+.nav-2{
+  position: absolute;
+  right: 0px;
+}
+
+.event_contain>*{
+  margin: 10px;
 }
