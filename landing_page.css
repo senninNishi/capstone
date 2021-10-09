@@ -1,0 +1,27 @@
+.select-btn{
+text-align: center;
+}
+.select-btn a{
+  text-decoration: none;
+}
+.btn{
+  width: 200px;
+  padding: 10px 30px ;
+  cursor: pointer;
+  margin-top: 40px;
+  font-size: 30px;
+  color: #267555;
+  background: #ece9e9;
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  transition: 0.5s;
+  position: absolute;
+  
+
+}
+
+.btn:hover{
+  background: #28b67e;
+  color: #ece9e9;
+}
