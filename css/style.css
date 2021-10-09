@@ -1,25 +1,77 @@
-body{
-  font-family: Montserrat Light;
-  margin: 0px;
-}
-h1,h2,h3,h4,h5,h6{
-  font-family: Roboto;
+header p{
+  text-align: right;
 }
 
 
-.header-bg{
-  background: #267555;
-
+nav > *{
+  display: inline-block;
 }
 
-.header-bg header{
+.container-section #about{
+  width: 50%;
+}
+
+.navigation{
+  list-style-type: none;
+}
+.navigation li{
+  display: inline-block;
+}
+.navigation a{
+  text-decoration: none;
+  transition: 0.5s;
+  padding: 5px;
+  color: #ECE9E9;
+}
+.navigation a:hover{
+  color: #1D4C4F;
+}
+
+.align-table td{
   text-align: center;
-  font-family: Roboto;
-  font-weight: bold;
-  font-size: 30px;
-  color: #edf2ed;
+  transition: 1s;
+}
+.align-table a{
+  text-decoration: none;
+}
+td img{
+  height: 20%;
+  width: 20%;
 }
 
-.toggle-btn{
-  font-family: Montserrat;
+
+.container-title{
+  background: #267555;
+  color: #ebf0f7;
 }
+
+.container-title >*{
+  padding: 5px;
+}
+
+.container-flex{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.item{
+  padding: 50px;
+}
+
+
+.nav-2{
+  position: absolute;
+  right: 0px;
+}
+
+.event_contain>*{
+  margin: 10px;
+}
+
+
+.table-benefits{
+  margin: 70px;
+}
+
+
