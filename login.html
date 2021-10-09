@@ -4,16 +4,15 @@
 <head>
   <meta charset="utf-8">
   <title>Malanday Database and Information System</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/login_style.css">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/style-login.css">
 </head>
 
 <body>
-  <div class="header-bg">
-    <header>
-      <p>WELCOME TO BARANGAY MALANDAY INFORMATION SYSTEM</p>
-    </header>
-  </div>
+  <header class="text-align-center">
+    <h1 style="margin: 0; padding: 10px;">WELCOME TO BARANGAY MALANDAY INFORMATION SYSTEM</h1>
+  </header>
+  
   <div class="bg">
     <div class="form-box">
       <div class="button-box">
@@ -26,16 +25,17 @@
         <input type="password" class="input-field" placeholder="Enter Password" required><br>
         <input type="checkbox" class="check-box" id="check-box">
         <label for="check-box">Remember Password</label>
-        <button type="submit" class="submit-btn">Login</button>
+        <div class="btn-holder"><button type="submit" class="submit-btn">Login</button></div>
       </form>
 
       <form id="register" class="input-group">
         <input type="text" class="input-field" placeholder="User ID" required>
         <input type="email" class="input-field" placeholder="Email" required>
-        <input type="password" class="input-field" placeholder="Enter Password" required><br>
+        <input type="password" class="input-field" placeholder="Enter Password" required>
+        <input type="password" class="input-field" placeholder="Re-type Password" required><br>
         <input type="checkbox" class="check-box" id="check-box" required>
         <label for="check-box">I accept the terms and conditions</label>
-        <button type="submit" class="submit-btn">Register</button>
+        <div class="btn-holder"><button type="submit" class="submit-btn">Register</button></div>
       </form>
     </div>
   </div>
