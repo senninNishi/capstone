@@ -4,164 +4,263 @@
 <head>
   <meta charset="utf-8">
   <title>Malanday Database and Information System</title>
-  <link rel="stylesheet" href="css/master.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="css/hover.css">
 </head>
 
 <body>
   <header>
-    <nav>
-      <div class="container-flex">
-        <div class="nav-1 nav "><h3 class="text-color-white">Brgy. Malanday Information System</h3></div>
-        <div class="nav-2 nav">
-          <ul class="navigation">
-            <li><a href="news.html">News</a></li>
-            <li><a href="services.html">Benefits</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Malanday Information System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto ps-3">
+            <li class="nav-item">
+              <a class="nav-link" href="news.html">News</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Benefits
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Children</a></li>
+                <li><a class="dropdown-item" href="#">Senior Citizens</a></li>
+                <li><a class="dropdown-item" href="#">PWD</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="file:///C:/Users/PC07/Desktop/Capstone-Main/Documents/Barangay_Benefits.pdf" target="_blank" rel="noopener noreferrer">Download PDF Copy</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Contacts</a>
+            </li>
           </ul>
         </div>
       </div>
-
     </nav>
-    
   </header>
+  <style>
+    .carousel-item {
+      height: 32rem;
+      background: #777;
+      color: white;
+      position: relative;
+      background-position: center;
+      background-size: cover;
+    }
 
-  
-  <div class="hero-image">
-    <div class="hero-text">
-      <h1 class="hero-text-in">WELCOME!</h1>
-    </div> 
-  </div>
-  <h3 class="hero-text-out">WE ENSURE THAT YOUR NEEDS ARE MET HERE AT BRGY.MALANDAY</h3>
-  
-  <hr>
-
-    <div class="container-section">
-      <div class="container-flex">
-        <div class="bg-container-green border-radius-right" style="margin: 0;">
-          <p style="margin: 20px;">
-            Malanday is a barangay in the city of Marikina. Its population as determined by the 2020 Census was 53,886.
-            This represented 11.82% of the total population of Marikina.Malanday was named after the shape of its territory, round and flat, just like that of a bilao (winnower).
-            Malanday is bounded on the northeast by Barangay Concepcion, while to its southeast sector is Barangay Sto. Niño.
-            On the southwest is Barangay Jesus dela Peña, and on the northwest is Quezon City. Mainly an agricultural area, Malanday was originally an uncultivated grassland that
-            formed part of a rural community that would be known later for its rice field. To reach the place, pioneers had to transport and deliver commodities using the carabao-drawn
-            kariton, given its ease in negotiating mud tracks.
-          </p>
+    .overlay-image {
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-position: center;
+      background-size: cover;
+      opacity: 0.5;
+      height: 100%;
+    }
+  </style>
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="overlay-image" style="background-image: url(images/welcome.jpg);"></div>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1 class="fw-bold">WELCOME TO BRGY. MALANDAY</h1>
+            <p>We ensure your needs are met here.</p>
+          </div>
         </div>
-        <div class="item-2 item">
-          <div class="mapouter">
-            <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" 
-              src="https://maps.google.com/maps?q=64%20Malaya%20St,%20Marikina,%201807%20Metro%20Manila&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>
-              .mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net">
-              adding google map to wordpress</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
-              </style></div></div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="overlay-image" style="background-image: url(images/login.jpg);"></div>
+        <div class="carousel-caption text-start">
+          <h1 class="fw-bold">Staying in Brgy. Malanday?</h1>
+          <p>Know your benefits.</p>
+          <a href="login.html" class="btn btn-lg btn-primary text-light">Sign Up</a>
+        </div>
+      </div>
+    </div>
+    <a href="#myCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
+      <span class="visually-hidden">Previous</span>
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a href="#myCarousel" class="carousel-control-next" role="button" data-bs-slide="next">
+      <span class="visually-hidden">Next</span>
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button text-light bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Welcome to Brgy. Malanday!
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="container ml-0 d-flex justify-content-around">
+
+            <p class="p-3 align-self-center">
+              Malanday is a barangay in the city of Marikina. Its population as determined by the 2020 Census was 53,886.
+              This represented 11.82% of the total population of Marikina.Malanday was named after the shape of its territory, round and flat, just like that of a bilao (winnower).
+              Malanday is bounded on the northeast by Barangay Concepcion, while to its southeast sector is Barangay Sto. Niño.
+              On the southwest is Barangay Jesus dela Peña, and on the northwest is Quezon City. Mainly an agricultural area, Malanday was originally an uncultivated grassland that
+              formed part of a rural community that would be known later for its rice field. To reach the place, pioneers had to transport and deliver commodities using the carabao-drawn
+              kariton, given its ease in negotiating mud tracks.
+            </p>
+            <div class="p-3">
+              <div class="mapouter">
+                <div class="mapouter">
+                  <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=64%20Malaya%20St,%20Marikina,%201807%20Metro%20Manila&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no"
+                      marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br>
+                    <style>
+                      .mapouter {
+                        position: relative;
+                        text-align: right;
+                        height: 500px;
+                        width: 600px;
+                      }
+                    </style><a href="https://www.embedgooglemap.net">
+                      adding google map to wordpress</a>
+                    <style>
+                      .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        height: 500px;
+                        width: 600px;
+                      }
+                    </style>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
-
-    <h2>Know your benefits!</h2>
-    <div class="container-flex-center">
+  </div>
+  </div>
+  <div class="container-md">
+    <h2 class="text-center text-dark">Know your benefits!</h2>
+    <div class="container-fluid d-flex justify-content-around">
       <a href="">
         <div class="image margin-default">
           <img class="image-img" src="images/children.png" alt="children">
           <div class="image-overlay image-overlay-primary">
-              <div class="image-title">Children</div>
-              <p class="image-description">
-                  Benefits for Children
-              </p>
+            <div class="image-title">Children</div>
+            <p class="image-description">
+              Benefits for Children
+            </p>
           </div>
         </div>
       </a>
-     
       <a href="">
         <div class="image margin-default">
           <img class="image-img" src="images/couple.png" alt="children">
           <div class="image-overlay image-overlay-primary">
-              <div class="image-title">Senior Citizens</div>
-              <p class="image-description">
-                  Benefits for Senior Citizens
-              </p>
+            <div class="image-title">Senior Citizens</div>
+            <p class="image-description">
+              Benefits for Senior Citizens
+            </p>
           </div>
         </div>
       </a>
-      
       <a href="">
         <div class="image margin-default">
           <img class="image-img" src="images/wheelchair.png" alt="children">
           <div class="image-overlay image-overlay-primary">
-              <div class="image-title">PWD</div>
-              <p class="image-description">
-                  Benefits for people with special
-              </p>
+            <div class="image-title">PWD</div>
+            <p class="image-description">
+              Benefits for people with special
+            </p>
           </div>
-        </div>  
+        </div>
       </a>
-      
     </div>
-
-
-    <div class="container-flex-row" style="margin: 100px 0px 100px;">
-      <div class="bg-container-green margin-left-zero border-radius-right container-flex-col" style="margin-right: 20px;">
-        <h1 class="text-align-center">MISSION</h1>
-        <p class="color-about">To implement systematic procedures and transparent frontline services to cater the needs of the people and establish people and services to cater the needs
-          of the people and establish people ands service oriented environment that will promote goodwill amonh the Barangay workers and comminity members.
-        </p>
-      </div>
-
-      <div class="bg-container-green margin-right-zero border-radius-left container-flex-col" style="margin-left: 20px;">
-        <h1 class="text-align-center">VISION</h1>
-        <p class="color-about">To provide quality and responsive services to the people and maximizing the resources of the Barangay in an efficient and effective way free from Red Tape gearing towards
-          community.
-        </p>
-     </div>
+  </div>
+  <div class="d-flex justify-content-around my-5">
+    <div class="bg-secondary me-5 w-50" style="border-top-right-radius: 75px; border-bottom-right-radius: 75px;">
+      <h1 class="text-dark m-4">MISSION</h1>
+      <p class="m-4">To implement systematic procedures and transparent frontline services to cater the needs of the people and establish people and services to cater the needs
+        of the people and establish people ands service oriented environment that will promote goodwill amonh the Barangay workers and comminity members.
+      </p>
     </div>
-      
-
-    <!--<div class="container-events">
-      <div class="event_contain">
-        <h2>ANNOUNCEMENTS</h2>
-        <table>
-          <tr>
-            <td>Announcement 1</td>
-          </tr>
-          <tr>
-            <td>Announcement 2</td>
-          </tr>
-        </table>
-      </div>
-
-      <hr>
-      <div class="event_contain">
-        <h2>EVENTS</h2>
-        <table>
-          <tr>
-            <td>Event 1</td>
-          </tr>
-          <tr>
-            <td>Event 2</td>
-          </tr>
-        </table>
-      </div>
-
+    <div class="bg-secondary w-50" style="border-top-left-radius: 75px; border-bottom-left-radius: 75px;">
+      <h1 class="text-dark m-4 ">VISION</h1>
+      <p class="m-4">To provide quality and responsive services to the people and maximizing the resources of the Barangay in an efficient and effective way free from Red Tape gearing towards
+        community.
+      </p>
     </div>
-  -->
-
-
-
-    <footer>
-      <div class="footer_content" style="margin-top: 100px;">
-        <ul>
-          <li><a href="news.html">News</a></li>
-          <li><a href="services.html">Benefits</a></li>
-          <li><a href="contacts.html">Contacts</a></li>
-          <li class="footer_year">2021</li>
-        </ul>
+  </div>
+  </div>
+  <footer class="page-footer font-small blue pt-4 bg-secondary">
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+      <!-- Grid row -->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+          <!-- Content -->
+          <h5 class="text-uppercase text-dark">Malanday Information System</h5>
+          <p class="text-light">Always be updated with your benefits.</p>
+        </div>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+          <!-- Links -->
+          <h5 class="text-uppercase text-center text-dark">Benefits</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-light text-decoration-none">Children</a>
+            </li>
+            <li>
+              <a href="#!" class="text-light text-decoration-none">Senior Citizens</a>
+            </li>
+            <li>
+              <a href="#!" class="text-light text-decoration-none">PWD</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+          <!-- Links -->
+          <h5 class="text-uppercase text-dark">More Options</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="" class="text-light text-decoration-none">News</a>
+            </li>
+            <li>
+              <a href="#!" class="text-light text-decoration-none">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Grid column -->
       </div>
+      <!-- Grid row -->
+    </div>
+    <!-- Footer Links -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 bg-primary text-light">2021
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
-    </footer>
 
 </body>
 

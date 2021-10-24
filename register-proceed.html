@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Malanday Database and Information System</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <section style="background-color: #eee;">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black m-5" style="border-radius: 25px;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+  
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign Up</p>
+  
+                  <form class="mx-1 mx-md-4" action="guest.html">
+                    <fieldset>
+                        <legend>Address</legend>
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <input type="text" id="address" class="form-control" placeholder="Strt/Block No., Street" required />
+                              <label class="form-label" for="address">Address</label>
+                            </div>
+                          </div>
+        
+                          <div class="d-flex flex-row align-items-center ms-3 mb-4">
+                              <select class="form-select" aria-label="Default select example" required>
+                                  <option selected>Select Purok</option>
+                                  <option value="1">Purok 1</option>
+                                  <option value="2">Purok 2</option>
+                                  <option value="3">Purok 3</option>
+                                  <option value="4">Purok 4</option>
+                                  <option value="5">Purok 5</option>
+                                  <option value="6">Purok 6</option>
+                                  <option value="7">Purok 7</option>
+                              </select>
+                          </div>
+
+                          <div class="d-flex flex-row align-items-center ms-3 mb-4">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select Barangay</option>
+                                <option value="1">Malanday</option>               
+                            </select>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center ms-3 mb-4">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select City</option>
+                                <option value="1">Marikina</option>               
+                            </select>
+                        </div>
+                    </fieldset>
+                    <hr>
+                    <fieldset>
+                        <legend>Beneficiary Information</legend>
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <input type="text" id="fname" class="form-control" required />
+                              <label class="form-label" for="fname">First Name</label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <input type="text" id="mname" class="form-control" required />
+                              <label class="form-label" for="mname">Middle Name</label>
+                            </div>
+                        </div>
+        
+        
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <input type="text" id="lname" class="form-control" required />
+                              <label class="form-label" for="lname">Last Name</label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <input type="text" id="suffix" class="form-control" placeholder="Jr, Sr, III, IV, etc."/>
+                              <label class="form-label" for="suffix">Suffixes</label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <input type="text" id="suffix" class="form-control" required />
+                              <label class="form-label" for="age">Age</label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center ms-3 mb-4">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Blood Type</option>
+                                <option value="1">A</option>
+                                <option value="2">B</option>
+                                <option value="3">AB</option>
+                                <option value="4">O</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <legend>Medical Needs (Check all that apply)</legend>
+                        <div class="m-5">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="medicine">
+                                <label class="form-check-label" for="medicine">
+                                  Maintenance Medicines
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="vaccines">
+                                <label class="form-check-label" for="vaccines">
+                                  Vaccines
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="other">
+                                <label class="form-check-label" for="other">
+                                  Others (refer to benefits list)
+                                </label>
+                              </div>
+                        </div>
+                        <legend>Category</legend>
+                        <div class="m-5">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="child">
+                                <label class="form-check-label" for="child">
+                                  Children
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="senior" >
+                                <label class="form-check-label" for="senior">
+                                  Senior Citizen
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="pwd" >
+                                <label class="form-check-label" for="pwd">
+                                  PWD
+                                </label>
+                              </div>
+                        </div>
+                        
+        
+                    </fieldset>
+                   
+                 
+  
+                   
+                      <div class="d-flex justify-content-around mx-4">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                      </div>
+                      
+               
+
+                    
+  
+                  </form>
+  
+                </div>
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+  
+                  <img src="images/register.png" class="img-fluid" alt="Sample image">
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

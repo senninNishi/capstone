@@ -4,33 +4,50 @@
 <head>
   <meta charset="utf-8">
   <title>Malanday Database and Information System</title>
-  <link rel="stylesheet" href="css/master.css">
-  <link rel="stylesheet" href="css/style-landing.css">
-
-
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <header class="text-align-center">
-      <h1 style="margin: 0; padding: 10px;">WELCOME TO BARANGAY MALANDAY INFORMATION SYSTEM</h1>
-    </header>
-
-  <div class="text-align-center" >
-    <div class="btn-display-column center-screen">
-      <a href="admin.html"><button type="button" class="btn">ADMIN</button></a>
-      <a href="login.html"><button type="button" class="btn">USER</button></a>
-      <a href="guest.html"><button type="button" class="btn">GUEST</button></a>
-    </div>
-    
-  </div>
-
-
-
-
-
-    
-
+  <section class="vh-100" style="background-color: #eee;">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
   
+                  <p class="text-center h4 fw-bold mb-5 mx-1 mx-md-1 mt-4">Welcome to Barangay Malanday Information System</p>
+  
+                  <form class="mx-1 mx-md-4">
+  
+                    
+                   
+                      <div class="d-flex flex-column justify-content-around mx-4">
+                        <button type="button" class="btn btn-primary btn-lg btn-block m-3" onClick="location.href='admin.html'">Admin</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block m-3" onClick="location.href='register.html'">User</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block m-3" onClick="location.href='guest.html'">Guest</button>
+                      </div>
+                      
+               
+
+                    
+  
+                  </form>
+  
+                </div>
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+  
+                  <img src="images/info.png" class="img-fluid" alt="Sample image">
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>

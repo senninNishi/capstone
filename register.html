@@ -17,23 +17,39 @@
               <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
   
-                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Login</p>
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign Up</p>
   
-                  <form class="mx-1 mx-md-4">
+                  <form class="mx-1 mx-md-4" action="register-proceed.html">
   
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input type="text" id="form3Example1c" class="form-control" />
-                        <label class="form-label" for="form3Example1c">Username</label>
+                        <input type="text" id="username" class="form-control" required />
+                        <label class="form-label" for="username">Username</label>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="email" id="email" class="form-control" required/>
+                        <label class="form-label" for="email">Your Email</label>
                       </div>
                     </div>
   
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input type="password" id="form3Example4c" class="form-control" />
-                        <label class="form-label" for="form3Example4c">Password</label>
+                        <input type="password" id="password" class="form-control" required />
+                        <label class="form-label" for="password">Password</label>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="password" id="repeat" class="form-control" required />
+                        <label class="form-label" for="repeat">Repeat your password</label>
                       </div>
                     </div>
   
@@ -42,22 +58,18 @@
                         class="form-check-input me-2"
                         type="checkbox"
                         value=""
-                        id="form2Example3c"
+                        id="form2Example3c" required
                       />
                       <label class="form-check-label" for="form2Example3">
-                       Remember Me
+                        I agree all statements in <a href="#!">Terms of service</a>
                       </label>
                     </div>
   
                    
                       <div class="d-flex justify-content-around mx-4">
-                        <button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='register.html'">Register</button>
-                        <button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='#'">Login</button>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='login.html'">Login</button>
                         <button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='guest.html'">Guest</button>
-                      </div>
-
-                      <div class="d-flex justify-content-center m-5 mb-3 mb-lg-4">
-                        <a href="">Forgot Password?</a>
                       </div>
                       
                
