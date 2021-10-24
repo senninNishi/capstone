@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malanday Database and Information System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Malanday Information System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto ps-3">
+            <li class="nav-item">
+              <a class="nav-link" href="guest.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html">News</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Benefits
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="children.html">Children</a></li>
+                <li><a class="dropdown-item" href="senior.html">Senior Citizens</a></li>
+                <li><a class="dropdown-item" href="pwd.html">PWD</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="file:///C:/Users/PC07/Desktop/Capstone-Main/Documents/Barangay_Benefits.pdf" target="_blank" rel="noopener noreferrer">Download PDF Copy</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="icons/senior.svg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-6 fw-bold lh-1 mb-3 text-dark">Benefits for Senior Citizens</h1>
+            <p class="lead">We need to respect our elders and take care of them as well!</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <a href="file:///C:/Users/PC07/Desktop/Capstone-Main/Documents/Barangay_Benefits.pdf" class="btn btn-outline-primary btn-lg px-4" target="_blank" rel="noopener noreferrer">Print a copy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="m-4">This list is updated as of 10/23/2021 and may be subject to change. Brgy. Malanday wants to
+        make sure that most of our residents are attended to with their health benefits. For more
+        information please visit our website or contact us <span class="fw-bold text-dark">941-6106</span></p>
+
+      <div class="accordion" id="accordions">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Maintenance Medicines
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordions">
+            <div class="accordion-body">
+              <div class="row">
+                <div class="col-4">
+                  <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-bp-list" data-bs-toggle="list" href="#list-bp" role="tab" aria-controls="list-bp">High Blood Pressure</a>
+                    <a class="list-group-item list-group-item-action" id="list-bsugar-list" data-bs-toggle="list" href="#list-bsugar" role="tab" aria-controls="list-bsugar">High Blood Sugar</a>
+                    <a class="list-group-item list-group-item-action" id="list-cholesterol-list" data-bs-toggle="list" href="#list-cholesterol" role="tab" aria-controls="list-cholesterol">High Cholesterol</a>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-bp" role="tabpanel" aria-labelledby="list-bp-list">
+                        <ul>
+                            <li>Amlodopine</li>
+                            <li>Losartan 50mg</li>
+                            <li>Losartan 100mg</li>
+                          </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="list-bsugar" role="tabpanel" aria-labelledby="list-bsugar-list">
+                        <ul>
+                            <li>Metformin 500gm</li>
+                          </ul>
+                    </div>
+                    <div class="tab-pane fade" id="list-cholesterol" role="tabpanel" aria-labelledby="list-cholesterol-list">
+                      <ul>
+                        <li>Atorvastatin</li>
+                        <li>Simvastatin</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Vaccines
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="row">
+                    <div class="col-4">
+                      <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action active" id="list-flu-list" data-bs-toggle="list" href="#list-flu" role="tab" aria-controls="list-flu">Influenza</a>
+                        <a class="list-group-item list-group-item-action" id="list-pnuemonia-list" data-bs-toggle="list" href="#list-pnuemonia" role="tab" aria-controls="list-pnuemonia">Pneumonia</a>
+                        
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-flu" role="tabpanel" aria-labelledby="list-flu-list">
+                            <h4>Who should get the vaccine?</h4>
+                            <p><span class="fw-bold text-dark">Everyone, especially every individual over 6 months of age, and those over 65 years of age: </span>  Vaccination is especially important for people who are at high risk of developing serious complications if they get the flu.</p>
+                            <h4>When should one get the vaccine?</h4>
+                            <p>Health care professionals recommend getting the influenza vaccination before flu season begins in your community. It takes about two weeks for the vaccine to produce a sufficient antibody response against the flu. Flu season can begin in October and last as late as May.</p>
+                        </div>
+                        
+    
+                        <div class="tab-pane fade" id="list-pnuemonia" role="tabpanel" aria-labelledby="list-pnuemonia-list">
+                            <h4>Who should get the vaccine?</h4>
+                            <p><span class="fw-bold text-dark">People over age 65: </span> As you age, your immune system doesn’t work as well as it once did. You’re more likely to have trouble fighting
+                            off a pneumonia infection. All adults over age 65 should get the vaccine.</p>
+                            <p><span class="fw-bold text-dark">Those with weakened immune systems: </span>Many diseases can cause your immune system to weaken, so it’s less able to fight off bugs like pneumonia.</p>
+                            <h4>When should one get the vaccine?</h4>
+                            <p>There’s no such thing as pneumonia season, like flu season. If you and your doctor decide that you need to have a pneumonia vaccine, you can get it done at any time of the year. If it’s flu season, you can even get a pneumonia vaccine at the same time that you get a flu vaccine, as long as you receive each shot in a different arm.</p>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="alert alert-primary m-4" role="alert">
+        <h3 class="fw-bold text-center">These benefits are identified as free service for all beneficiaries of Brgy. Malanday.</h3>
+        <ul>
+          <li>Senior Citizens and PWDs are top priority</li>
+          <li>Benefits are available to all beneficiaries of Brgy. Malanday, Marikina City</li>
+          <li>No one shall be charged for these services, if you experienced this please call 941-6106 </li>
+        </ul>
+      </div>
+     
+
+      
+     
+      
+     
+ 
+  <footer class="page-footer font-small blue pt-4 bg-secondary ">
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+      <!-- Grid row -->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+          <!-- Content -->
+          <h5 class="text-uppercase text-dark">Malanday Information System</h5>
+          <p class="text-light">Always be updated with your benefits.</p>
+        </div>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+          <!-- Links -->
+          <h5 class="text-uppercase text-center text-dark">Benefits</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="children.html" class="text-light text-decoration-none">Children</a>
+            </li>
+            <li>
+              <a href="senior.html" class="text-light text-decoration-none">Senior Citizens</a>
+            </li>
+            <li>
+              <a href="pwd.html" class="text-light text-decoration-none">PWD</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+          <!-- Links -->
+          <h5 class="text-uppercase text-dark">More Options</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="news.html" class="text-light text-decoration-none">News</a>
+            </li>
+            <li>
+              <a href="contacts.html" class="text-light text-decoration-none">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+    <!-- Footer Links -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 bg-primary text-light">2021
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  
+
+
+
+</body>
+</html>
