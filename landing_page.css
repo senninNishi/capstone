@@ -1,14 +1,12 @@
-.select-btn {
-  text-align: center;
+.select-btn{
+text-align: center;
 }
-
-.select-btn a {
+.select-btn a{
   text-decoration: none;
 }
-
-.btn {
+.btn{
   width: 200px;
-  padding: 10px 30px;
+  padding: 10px 30px ;
   cursor: pointer;
   margin-top: 40px;
   font-size: 30px;
@@ -19,9 +17,11 @@
   border-radius: 10px;
   transition: 0.5s;
   position: absolute;
+  
+
 }
 
-.btn:hover {
+.btn:hover{
   background: #28b67e;
   color: #ece9e9;
 }

@@ -1,102 +1,112 @@
 <?php
-include ("config.php");
-   session_start();
-   
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form 
-      
-      $UserID1 = mysqli_real_escape_string($db,$_POST['UserID1']);
-      $Password1 = mysqli_real_escape_string($db,$_POST['Password1']); 
-      
-      $sql = "SELECT UserID FROM logininfo WHERE UserID = '$UserID1' and Password = '$Password1' Limit 1";
-      $result = mysqli_query($db,$sql) or die( mysqli_error($db));
-      $count = mysqli_num_rows($result);
-      
-      // If result matched $myusername and $mypassword, table row must be 1 row
+$error = NULL;
+
+if (isset($_POST['submit']))
+{
+  $mysqli = NEW MySQLi ('localhost', 'root', '', 'capstone1');
+
+  $u = $mysqli -> real_escape_string($_POST['UserID1']);
+  $p = $mysqli -> real_escape_string($_POST['Password1']);
+  $p = md5($p);
+
+  $resultSet = $mysqli -> query ("SELECT username FROM logininfo WHERE username = '$u' AND password = '$p' LIMIT 1");
+  $count = mysqli_num_rows($resultSet);
+  if ($count == 1) 
+  {
     
-      if($count == 1) {
-         $_SESSION['UserID1']=$UserID1;
-         
-         header("location: news.php");
-      }else {
-         echo "Login credentials is invalid.";;
-      }
-   }
+
+   
+      header ("location: services.php");
+    
+   
+
+  }
+  else
+  {
+    echo "The username or password is incorrect.";
+  }
+}
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-
-
 <head>
   <meta charset="utf-8">
   <title>Malanday Database and Information System</title>
-  <link rel="stylesheet" href="css/master.css">
-  <link rel="stylesheet" href="css/style-login.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <header class="text-align-center">
-    <h1 style="margin: 0; padding: 10px;">WELCOME TO BARANGAY MALANDAY INFORMATION SYSTEM</h1>
-  </header>
+  <section class="vh-100" style="background-color: #eee;">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
   
-  <div class="bg">
-    <div class="form-box">
-      <div class="button-box">
-        <div id="btn"></div>
-        <button type="button" class="toggle-btn" onclick="login()">Login</button>
-        <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Login</p>
+  
+                  <form class="mx-1 mx-md-4" method="POST">
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="text"  id="form3Example1c" class="form-control" name="UserID1" required>
+                        <label class="form-label" for="form3Example1c">Username</label>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="password" id="form3Example4c" class="form-control" name="Password1" required>
+                        <label class="form-label" for="form3Example4c">Password</label>
+                      </div>
+                    </div>
+  
+                    <div class="form-check d-flex justify-content-center mb-5">
+                      <input
+                        class="form-check-input me-2"
+                        type="checkbox"
+                        value=""
+                        id="form2Example3c"
+                      />
+                      <label class="form-check-label" for="form2Example3">
+                       Remember Me
+                      </label>
+                    </div>
+                    
+                  
+  
+                   
+                      <div class="d-flex justify-content-around mx-4">
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='register.html'">Register</button>
+                        <button type="submit" name = "submit"; class="btn btn-primary btn-lg btn-block">Login</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='guest.html'">Guest</button>
+                      </div>
+
+                      <div class="d-flex justify-content-center m-5 mb-3 mb-lg-4">
+                        <a href="">Forgot Password?</a>
+                      </div>
+                      </form>
+  
+                </div>
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+  
+                  <img src="images/register.png" class="img-fluid" alt="Sample image">
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <form id="login" class="input-group" method="POST">
-        <input type="text" class="input-field" placeholder="User ID" name = "UserID1" required>
-        <input type="password" class="input-field" placeholder="Enter Password" name = "Password1" required><br>
-        <input type="checkbox" class="check-box" id="check-box">
-        <label for="check-box">Remember Password</label>
-        <div class="btn-holder"><button type="submit" class="submit-btn">Login</button></div>
-      </form>
-
-      <form id="register" class="input-group" action="insert.php" method="POST">
-        <input type="text" class="input-field" placeholder="User ID" name="UserID" required>
-        <input type="email" class="input-field" placeholder="Email" name="Email" required>
-        <input type="password" class="input-field" placeholder="Enter Password" name="Password" id ="pword"required>
-        <input type="password" class="input-field" placeholder="Re-type Password" name="cpassword" id ="cpword" required><br>
-        <input type="checkbox" class="check-box" id="check-box" required>
-        <label for="check-box">I accept the terms and conditions</label>
-        <div class="btn-holder"><button type="submit" class="submit-btn">Register</button></div>
-      </form>
     </div>
-  </div>
-
-  <script>
-    var x = document.getElementById("login");
-    var y = document.getElementById("register");
-    var z = document.getElementById("btn");
-
-    function register() {
-      x.style.left = "-400px";
-      y.style.left = "50px";
-      z.style.left = "110px";
-    }
-
-    function login() {
-      x.style.left = "50px";
-      y.style.left = "450px";
-      z.style.left = "0";
-    }
-
-    function validate(){
-
-            var a = document.getElementById("pword").value;
-            var b = document.getElementById("cpword").value;
-            if (a!=b) {
-               alert("Passwords do no match");
-               return false;
-            }
-        }
-
-    
-  </script>
+  </section>
 </body>
 
 </html>

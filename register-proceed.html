@@ -3,9 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-    
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Malanday Database and Information System</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -22,19 +19,19 @@
   
                   <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign Up</p>
   
-                  <form class="mx-1 mx-md-4" action="login.html">
+                  <form class="mx-1 mx-md-4" action="guest.html">
                     <fieldset>
                         <legend>Address</legend>
                         <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                              <input type="text" id="address" class="form-control" placeholder="Strt/Block No., Street" required />
+                              <input type="text" id="address" class="form-control" placeholder="Strt/Block No., Street" name="Address" required />
                               <label class="form-label" for="address">Address</label>
                             </div>
                           </div>
         
                           <div class="d-flex flex-row align-items-center ms-3 mb-4">
-                              <select class="form-select" aria-label="Default select example" required>
+                              <select class="form-select" aria-label="Default select example" name="Purok" required>
                                   <option selected>Select Purok</option>
                                   <option value="1">Purok 1</option>
                                   <option value="2">Purok 2</option>
@@ -66,7 +63,7 @@
                         <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                              <input type="text" id="fname" class="form-control" required />
+                              <input type="text" id="fname" class="form-control" name="Fname" required />
                               <label class="form-label" for="fname">First Name</label>
                             </div>
                         </div>
@@ -74,7 +71,7 @@
                         <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                              <input type="text" id="mname" class="form-control" required />
+                              <input type="text" id="mname" class="form-control" name="Mname" required />
                               <label class="form-label" for="mname">Middle Name</label>
                             </div>
                         </div>
@@ -83,7 +80,7 @@
                         <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                              <input type="text" id="lname" class="form-control" required />
+                              <input type="text" id="lname" class="form-control" name="LName" required />
                               <label class="form-label" for="lname">Last Name</label>
                             </div>
                         </div>
@@ -91,7 +88,7 @@
                         <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                              <input type="text" id="suffix" class="form-control" placeholder="Jr, Sr, III, IV, etc."/>
+                              <input type="text" id="suffix" class="form-control" name="Suffix" placeholder="Jr, Sr, III, IV, etc."/>
                               <label class="form-label" for="suffix">Suffixes</label>
                             </div>
                         </div>
@@ -99,13 +96,13 @@
                         <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                              <input type="text" id="suffix" class="form-control" required />
+                              <input type="text" id="suffix" class="form-control" name="Age" required />
                               <label class="form-label" for="age">Age</label>
                             </div>
                         </div>
 
                         <div class="d-flex flex-row align-items-center ms-3 mb-4">
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" name="BType" aria-label="Default select example">
                                 <option selected>Blood Type</option>
                                 <option value="1">A</option>
                                 <option value="2">B</option>

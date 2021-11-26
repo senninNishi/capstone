@@ -1,8 +1,9 @@
 <?php
 
 $UserID = $_POST['UserID'];
-$Email = $_POST['Email'];
-$Password = $_POST['Password'];
+$Address = $_POST['Address'];
+$Purok = $_POST['Purok'];
+$Line2 = "Malanday, Marikina City";
 
 
 if ($_POST['Password'] === $_POST['cpassword']) {
@@ -42,26 +43,26 @@ if (!empty($UserID) || !empty($Email) || !empty($Password))
 			$stmt->bind_param("sss", $UserID, $Email, $Password);
 			$stmt->execute();
 			echo "Registration Successful!";
-			header("location: news.html");
 		} else {
 			echo "UserID is already registered.";
 		}
 		$stmt -> close();
 		$conn->close();
-
 }
 }
 
 else
 {
-	echo "All fields are required";
+	echo "All fields are quired";
 	die();
 }
 }
 else
 {
-
+	header("location: Register.php");
 	echo '<script>alert("Password not matched.")</script>';
-	echo'<script>location.replace("register.php")</script>';
 }
+
 ?>
+
+
