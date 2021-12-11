@@ -3,10 +3,15 @@
 
 <head>
   <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Malanday Database and Information System</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="css/query.css">
   <link rel="stylesheet" href="css/hover.css">
+  
 </head>
 
 <body>
@@ -27,13 +32,13 @@
                 Benefits
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Children</a></li>
-                <li><a class="dropdown-item" href="#">Senior Citizens</a></li>
-                <li><a class="dropdown-item" href="#">PWD</a></li>
+                <li><a class="dropdown-item" href="children.html">Children</a></li>
+                <li><a class="dropdown-item" href="senior.html">Senior Citizens</a></li>
+                <li><a class="dropdown-item" href="pwd.html">PWD</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="file:///C:/Users/PC07/Desktop/Capstone-Main/Documents/Barangay_Benefits.pdf" target="_blank" rel="noopener noreferrer">Download PDF Copy</a></li>
+                <li><a class="dropdown-item" href="https://drive.google.com/file/d/12UtuzbeRDPrTRizbV7KT6A4euo7NO29z/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download PDF Copy</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -109,8 +114,13 @@
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <div class="container ml-0 d-flex justify-content-around">
+          <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.1012388752356!2d121.09164631532106!3d14.
+            650194179785899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b9c46257f2e9%3A0x485212889f76f8bc!
+            2sBarangay%20Hall%2C%20Barangay%20Malanday!5e0!3m2!1sen!2sph!4v1635070447300!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
 
+          <div class="container-sm">
             <p class="p-3 align-self-center">
               Malanday is a barangay in the city of Marikina. Its population as determined by the 2020 Census was 53,886.
               This represented 11.82% of the total population of Marikina.Malanday was named after the shape of its territory, round and flat, just like that of a bilao (winnower).
@@ -119,85 +129,57 @@
               formed part of a rural community that would be known later for its rice field. To reach the place, pioneers had to transport and deliver commodities using the carabao-drawn
               kariton, given its ease in negotiating mud tracks.
             </p>
-            <div class="p-3">
-              <div class="mapouter">
-                <div class="mapouter">
-                  <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=64%20Malaya%20St,%20Marikina,%201807%20Metro%20Manila&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no"
-                      marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br>
-                    <style>
-                      .mapouter {
-                        position: relative;
-                        text-align: right;
-                        height: 500px;
-                        width: 600px;
-                      }
-                    </style><a href="https://www.embedgooglemap.net">
-                      adding google map to wordpress</a>
-                    <style>
-                      .gmap_canvas {
-                        overflow: hidden;
-                        background: none !important;
-                        height: 500px;
-                        width: 600px;
-                      }
-                    </style>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
     </div>
   </div>
   </div>
-  <div class="container-md">
-    <h2 class="text-center text-dark">Know your benefits!</h2>
-    <div class="container-fluid d-flex justify-content-around">
-      <a href="">
-        <div class="image margin-default">
-          <img class="image-img" src="images/children.png" alt="children">
-          <div class="image-overlay image-overlay-primary">
-            <div class="image-title">Children</div>
-            <p class="image-description">
-              Benefits for Children
-            </p>
-          </div>
+  <h2 class="text-center text-dark m-5">Know your benefits!</h2>
+  <div class="container d-flex justify-content-around">
+    <a href="children.html">
+      <div class="image margin-default">
+        <img class="image-img" src="images/children.png" alt="children">
+        <div class="image-overlay image-overlay-primary">
+          <div class="image-title">Children</div>
+          <p class="image-description">
+            Benefits for Children
+          </p>
         </div>
-      </a>
-      <a href="">
-        <div class="image margin-default">
-          <img class="image-img" src="images/couple.png" alt="children">
-          <div class="image-overlay image-overlay-primary">
-            <div class="image-title">Senior Citizens</div>
-            <p class="image-description">
-              Benefits for Senior Citizens
-            </p>
-          </div>
+      </div>
+    </a>
+    <a href="senior.html">
+      <div class="image margin-default">
+        <img class="image-img" src="images/couple.png" alt="children">
+        <div class="image-overlay image-overlay-primary">
+          <div class="image-title">Senior Citizens</div>
+          <p class="image-description">
+            Benefits for Senior Citizens
+          </p>
         </div>
-      </a>
-      <a href="">
-        <div class="image margin-default">
-          <img class="image-img" src="images/wheelchair.png" alt="children">
-          <div class="image-overlay image-overlay-primary">
-            <div class="image-title">PWD</div>
-            <p class="image-description">
-              Benefits for people with special
-            </p>
-          </div>
+      </div>
+    </a>
+    <a href="pwd.html">
+      <div class="image margin-default">
+        <img class="image-img" src="images/wheelchair.png" alt="children">
+        <div class="image-overlay image-overlay-primary">
+          <div class="image-title">PWD</div>
+          <p class="image-description">
+            Benefits for people with special
+          </p>
         </div>
-      </a>
-    </div>
+      </div>
+    </a>
   </div>
+
   <div class="d-flex justify-content-around my-5">
-    <div class="bg-secondary me-5 w-50" style="border-top-right-radius: 75px; border-bottom-right-radius: 75px;">
-      <h1 class="text-dark m-4">MISSION</h1>
-      <p class="m-4">To implement systematic procedures and transparent frontline services to cater the needs of the people and establish people and services to cater the needs
+    <div class="bg-primary w-50">
+      <h1 class="text-light m-4">MISSION</h1>
+      <p class="m-4 text-light">To implement systematic procedures and transparent frontline services to cater the needs of the people and establish people and services to cater the needs
         of the people and establish people ands service oriented environment that will promote goodwill amonh the Barangay workers and comminity members.
       </p>
     </div>
-    <div class="bg-secondary w-50" style="border-top-left-radius: 75px; border-bottom-left-radius: 75px;">
+    <div class="bg-secondary w-50">
       <h1 class="text-dark m-4 ">VISION</h1>
       <p class="m-4">To provide quality and responsive services to the people and maximizing the resources of the Barangay in an efficient and effective way free from Red Tape gearing towards
         community.
@@ -224,13 +206,13 @@
           <h5 class="text-uppercase text-center text-dark">Benefits</h5>
           <ul class="list-unstyled">
             <li>
-              <a href="#!" class="text-light text-decoration-none">Children</a>
+              <a href="children.html" class="text-light text-decoration-none">Children</a>
             </li>
             <li>
-              <a href="#!" class="text-light text-decoration-none">Senior Citizens</a>
+              <a href="senior.html" class="text-light text-decoration-none">Senior Citizens</a>
             </li>
             <li>
-              <a href="#!" class="text-light text-decoration-none">PWD</a>
+              <a href="pwd.html" class="text-light text-decoration-none">PWD</a>
             </li>
           </ul>
         </div>
@@ -241,10 +223,10 @@
           <h5 class="text-uppercase text-dark">More Options</h5>
           <ul class="list-unstyled">
             <li>
-              <a href="" class="text-light text-decoration-none">News</a>
+              <a href="news.html" class="text-light text-decoration-none">News</a>
             </li>
             <li>
-              <a href="#!" class="text-light text-decoration-none">Contacts</a>
+              <a href="contacts.html" class="text-light text-decoration-none">Contacts</a>
             </li>
           </ul>
         </div>
