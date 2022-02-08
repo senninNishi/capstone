@@ -1,0 +1,17 @@
+[
+    {
+        "name" : "Staycation with Hotel-Style Amenities & Big Pools",
+        "price" : 2784,
+        "guest" : 4,
+        "location" : "Quezon City, Metro Manila Philippines.",
+        "type" : "Condominium",
+        "image": "1BRrooms.jpg"
+    },
+    {
+        "name"  : "2BR + Work Office + 65-inch SmarTV w/PS4 & Netflix",
+        "price" :  2956,
+        "guest" :  8,
+        "location": "Quezon City, Metro Manila, Philippines",
+        "image": "2BRrooms.jpg"
+    }
+]

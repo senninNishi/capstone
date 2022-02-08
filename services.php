@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <?php
+session_start();
+?>
+
+
 
 <head>
   <meta charset="utf-8">
   <title>Malanday Database and Information System</title>
   <link rel="stylesheet" href="css/master.css">
   <link rel="stylesheet" href="css/style.css">
+
+
   
 </head>
 
 <body>
+
+
   <header>
     <nav>
       <div class="container-flex">
@@ -20,6 +29,7 @@
             <li><a href="news.html">News</a></li>
             <li><a href="services.html">Benefits</a></li>
             <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="logout.php">Logout</a></li>
           </ul>
         </div>
       </div>
@@ -27,12 +37,9 @@
     </nav>
   </header>
 
-  <div class="bg-container-light">
-    <h1>BENEFITS</h1>
-  </div>
-  <h1>This site is still under development</h1>
+  
 
-
+  <h1>Hello there, <?php echo $_SESSION['u'];?></h1>
 </body>
 
 <footer class="footer-position-fixed">
@@ -42,6 +49,9 @@
       <li><a href="services.html">Benefits</a></li>
       <li><a href="contacts.html">Contacts</a></li>
       <li class="footer_year">2021</li>
+      
+
+      
     </ul>
 
   </div>

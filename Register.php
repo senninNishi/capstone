@@ -1,5 +1,6 @@
 <?php
 $error = NULL;
+session_start();
 use PHPMailer\PHPMailer\PHPMailer;
 
 require_once 'phpmailer/Exception.php';
@@ -18,21 +19,22 @@ if (isset($_POST['submit']))
   $Email = $_POST['Email'];
 
   $mysqli2 = NEW MySQLi('localhost', 'root', '', 'capstone1');
-  $check = $mysqli2->query("SELECT username FROM logininfo where username = '$UserID' or email = '$Email'");
-  $count2 = mysqli_num_rows($check);
+  $resultSet = $mysqli2 -> query ("SELECT * FROM logininfo WHERE username = '$UserID' OR email = '$Email'");
+  $count2 = mysqli_num_rows($resultSet);
 
-  if ($count2 == 1) {
-    echo ("Username or Password has been used.");
+  if ($count2 == 1 ) {
+    echo ("Username or email has been used.");
     die();
   }
-
-  else
-  {
+  
   if (strlen($UserID) < 5) {
-    $error = "Your username must be at least 5 characters";
+    echo ("Username must be less than 5 characters.");
+    die();
+    
   }
-  elseif ($cpassword != $Password) {
-    $error .="<p>Your passwords do not match</p>";
+  if ($cpassword != $Password) {
+    echo ("Your passwords do not match");
+    die();
   }
   else
   {
@@ -97,7 +99,6 @@ if (isset($_POST['submit']))
 }
 }
     
-  }
 
 }
 
@@ -109,6 +110,7 @@ if (isset($_POST['submit']))
   <meta charset="utf-8">
   <title>Malanday Database and Information System</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 </head>
 
 <body>
@@ -123,37 +125,41 @@ if (isset($_POST['submit']))
   
                   <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign Up</p>
   
-                  <form class="mx-1 mx-md-4" method="POST">
+                  <form class="mx-1 mx-md-4" method="POST" id ="registration_form">
   
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="email">Username</label>
                         <input type="text" id="username" class="form-control" name ="UserID" required />
-                        <label class="form-label" for="username">Username</label>
+                        <span class="error_form" id="username_error_message"></span>
                       </div>
                     </div>
   
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="email">Your Email</label>
                         <input type="email" id="email" class="form-control" name="Email" required/>
-                        <label class="form-label" for="email">Your Email</label>
+                        <span class="error_form" id="email_error_message"></span>
                       </div>
                     </div>
   
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="email">Password</label>
                         <input type="password" id="password" class="form-control" name="Password" required />
-                        <label class="form-label" for="password">Password</label>
+                        <span class="error_form" id="password_error_message"></span>
                       </div>
                     </div>
   
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input type="password" id="repeat" class="form-control" name="cpassword" required />
-                        <label class="form-label" for="repeat">Repeat your password</label>
+                        <label class="form-label" for="email">Confirm</label>
+                        <input type="password" id="cpassword" class="form-control" name="cpassword" required />
+                        <span class="error_form" id="retype_password_error_message"></span>
                       </div>
                     </div>
   
@@ -172,7 +178,7 @@ if (isset($_POST['submit']))
                    
                       <div class="d-flex justify-content-around mx-4">
                         <button type="submit" name ="submit" value="register" class="btn btn-primary btn-lg btn-block">Submit</button>
-                        <button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='login.html'">Login</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='login.php'">Login</button>
                         <button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='guest.html'">Guest</button>
                       </div>
                       
@@ -194,6 +200,113 @@ if (isset($_POST['submit']))
       </div>
     </div>
   </section>
+
+  <script type="text/javascript">
+      $(function() {
+
+         $("#username_error_message").hide();
+         $("#email_error_message").hide();
+         $("#password_error_message").hide();
+         $("#retype_password_error_message").hide();
+
+         var error_username = false;
+         var error_email = false;
+         var error_password = false;
+         var error_retype_password = false;
+
+         $("#username").focusout(function(){
+            check_username();
+         });
+         $("#email").focusout(function() {
+            check_email();
+         });
+         $("#password").focusout(function() {
+            check_password();
+         });
+         $("#cpassword").focusout(function() {
+            check_retype_password();
+         });
+
+         function check_username() {
+          var username_length = $("#username").val().length;
+            if (username_length > 6) {
+               $("#username_error_message").hide();
+               $("#username").css("border-bottom","2px solid #34F458");
+            } else {
+               $("#username_error_message").html("Username should be more than 6 characters.");
+               $("#username_error_message").show();
+               $("#username").css("border-bottom","2px solid #F90A0A");
+               error_username = true;
+            }
+         }
+
+
+         function check_password() {
+          var pattern = /^[a-zA-Z0-9!@#\$%\^\&*\)\(+=._-]{6,}$/g;
+            var password = $("#password").val();
+
+            if (pattern.test(password) && password !== ''){
+               $("#password_error_message").hide();
+               $("#password").css("border-bottom","2px solid #34F458");
+            } else {
+               $("#password_error_message").html("Password must contain at least one number, one lowercase and uppercase letter, and must have at least six characters.");
+               $("#password_error_message").show();
+               $("#password").css("border-bottom","2px solid #F90A0A");
+               error_password = true;
+            }
+         }
+
+         function check_retype_password() {
+            var password = $("#password").val();
+            var retype_password = $("#cpassword").val();
+            if (password !== retype_password) {
+               $("#retype_password_error_message").html("Passwords do not match");
+               $("#retype_password_error_message").show();
+               $("#cpassword").css("border-bottom","2px solid #F90A0A");
+               error_retype_password = true;
+            } else {
+               $("#retype_password_error_message").hide();
+               $("#cpassword").css("border-bottom","2px solid #34F458");
+            }
+         }
+
+         function check_email() {
+            var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            var email = $("#email").val();
+            if (pattern.test(email) && email !== '') {
+               $("#email_error_message").hide();
+               $("#email").css("border-bottom","2px solid #34F458");
+            } else {
+               $("#email_error_message").html("Invalid Email");
+               $("#email_error_message").show();
+               $("#email").css("border-bottom","2px solid #F90A0A");
+               error_email = true;
+            }
+         }
+
+         $("#registration_form").submit(function() {
+            error_username = false;
+            error_email = false;
+            error_password = false;
+            error_retype_password = false;
+
+            check_username();
+            check_email();
+            check_password();
+            check_retype_password();
+
+            if (error_username === false && error_sname === false && error_email === false && error_password === false && error_retype_password === false) {
+               alert("Registration Successfull");
+               return true;
+            } else {
+               alert("Please Fill the form Correctly");
+               return false;
+            }
+
+
+         });
+      });
+   </script>
 </body>
 
 </html>

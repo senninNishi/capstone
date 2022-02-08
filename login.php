@@ -1,25 +1,40 @@
 <?php
 $error = NULL;
+session_start();
+
+if(isset($_SESSION['u'])) {
+    header ("location: services.php");
+} 
 
 if (isset($_POST['submit']))
 {
   $mysqli = NEW MySQLi ('localhost', 'root', '', 'capstone1');
 
-  $u = $mysqli -> real_escape_string($_POST['UserID1']);
-  $p = $mysqli -> real_escape_string($_POST['Password1']);
-  $p = md5($p);
+  $_SESSION['u'] = $mysqli -> real_escape_string($_POST['UserID1']);
+  $_SESSION['p'] = $mysqli -> real_escape_string($_POST['Password1']);
+  $_SESSION['p'] = md5($_SESSION['p']);
 
-  $resultSet = $mysqli -> query ("SELECT username FROM logininfo WHERE username = '$u' AND password = '$p' LIMIT 1");
+  $resultSet = $mysqli -> query ("SELECT * FROM logininfo WHERE username = '$_SESSION[u]' AND password = '$_SESSION[p]' LIMIT 1");
   $count = mysqli_num_rows($resultSet);
+ 
+
   if ($count == 1) 
   {
-    
+    $row = $resultSet->fetch_assoc();
+      $verified1 = $row['verified'];
+      $email = $row['email'];
+      $date = $row['createdate'];
 
-   
-      header ("location: services.php");
-    
-   
+    if ($verified1 == 1)
+    {
+      //continue
 
+      header("location: services.php");
+    }
+    else
+    {
+      echo "This account has not yet verified. An email has been sent to $email on $date. Please check your inbox.";
+    }
   }
   else
   {
@@ -84,7 +99,7 @@ if (isset($_POST['submit']))
   
                    
                       <div class="d-flex justify-content-around mx-4">
-                        <button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='register.html'">Register</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='register.php'">Register</button>
                         <button type="submit" name = "submit"; class="btn btn-primary btn-lg btn-block">Login</button>
                         <button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='guest.html'">Guest</button>
                       </div>
